@@ -24,7 +24,7 @@ void vertex() {
 	float angle_to_rotate = atan(to_camera.x, to_camera.z) - atan(-1, 0);
 	mat4 rotation_matrix = mat4(vec4(cos(angle_to_rotate), 0, -sin(angle_to_rotate), 0.0), vec4(0.0, 1.0, 0.0, 0.0), vec4(sin(angle_to_rotate), 0.0, cos(angle_to_rotate), 0.0), vec4(0.0, 0.0, 0.0, 1.0));
 	MODELVIEW_MATRIX = MODELVIEW_MATRIX * rotation_matrix;
-	COLOR = lerp(base_colour, tip_colour, VERTEX.y * 2.433670316);
+	COLOR = lerp(base_colour, tip_colour, VERTEX.y * 3.433670316);
 }
 
 void fragment() {
